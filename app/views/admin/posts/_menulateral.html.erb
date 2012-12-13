@@ -1,0 +1,40 @@
+<!-- Box -->
+<div class="box">
+
+<!-- Box Head -->
+<div class="box-head">
+<h2>Menu de Opções</h2>
+</div>
+<!-- End Box Head-->
+
+<div class="box-content">
+
+<%= link_to new_admin_post_path, :class => 'add-button' do %>
+<span>Adicionar notícias e eventos</span>
+<% end %>
+
+
+
+
+<div class="cl">&nbsp;</div>
+<div id=".media">
+<div class="media">
+
+<% if @galleries.present? %>
+  <%- @galleries.each do |g| -%>
+
+   <%= link_to image_tag(g.avatar.url(:thumb), :size => "60x60") , g.avatar.url , :target => "_blank"  %>
+  <%- end -%>
+<% end %>
+
+</div>
+</div>
+
+
+
+<div class="cl">&nbsp;</div>
+
+
+</div>
+</div>
+<!-- End Box -->

@@ -15,41 +15,17 @@ pauseTime:6000});
     });
   </script>
 <!-- fecha slide show -->
+<%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css", "application" %>
+<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application" %>
 </head>
 
 <body>
 <div id="header-wrapper">
-	<header id="header" class="5grid-layout">
-		<div id="row">
-			<div id="12u">
-				<div id="logo">
-					<h1><a href="#" class="mobileUI-site-name">BANDA XOTE7</a></h1>
-					
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="12u">
-				<div class="5grid-layout" id="menu">
-					<nav class="mobileUI-site-nav">
-						<ul>
-							<li class="current_page_item"><a href="index.html">Home</a></li>
-							<li><a href="threecolumn.html">Agenda</a></li>
-							<li><a href="twocolumn1.html">Contatos</a></li>
-							<li><a href="twocolumn2.html">Galeria</a></li>
-							<li><a href="onecolumn.html">Fãs</a></li>
-							<li><a href="onecolumn.html">Novidades</a></li>
-							<li><a href="onecolumn.html">Xote7</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</header>
+	<%= render :partial => 'layouts/menu' %>
 </div>
 <!--conteudo dimanico -->
 <div id="wrapper">
-
+ 
 
 <%= yield %>
 

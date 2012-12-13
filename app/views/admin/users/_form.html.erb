@@ -1,0 +1,71 @@
+<!-- Main -->
+<div id="main">
+<div class="cl">&nbsp;</div>
+
+<!-- Content -->
+<div id="content">    
+
+
+<!-- Box -->
+<div class="box">
+<!-- Box Head -->
+<div class="box-head">
+<h2>Cadastro de categoria </h2>
+</div>
+<!-- End Box Head -->
+
+<%= form_for [:admin, @user ] do |f| %>
+<%= error_messages_for @user %>
+<!-- Form -->
+<div class="form">
+<p>
+<label>Nome usuário</label>
+<%= f.text_field :username , :placeholder => "Digite o nome usuário", :class => "field size1" %>
+
+</p>  
+<p>
+<label>E-mail</label>
+<%= f.text_field :email, :placeholder => "Digite o e-mail", :class => "field size1" %>
+
+</p>  
+<p>
+<label>Senha</label>
+<%= f.password_field :password, :placeholder => "Digite a senha", :class => "field size1" %>
+
+</p> 
+<p>
+<label>Confirme a Senha</label>
+<%= f.password_field :password_confirmation, :placeholder => "Confirme a senha", :class => "field size1" %>
+
+</p>  
+<p>
+<div class="buttons">
+<%= f.submit %> <%= link_to 'Back', admin_users_path ,:class => "button"%>
+</div>
+</p>
+
+</div>
+<!-- End Form -->
+
+
+<% end %>
+</div>
+<!-- End Box -->
+
+</div>
+<!-- End Content -->
+
+<!-- Sidebar -->
+<div id="sidebar">
+
+<%= render :partial => 'menulateral' %>
+
+</div>
+<!-- End Sidebar -->
+
+<div class="cl">&nbsp;</div>      
+</div>
+<!-- Main -->
+
+
+

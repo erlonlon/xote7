@@ -1,0 +1,91 @@
+
+<!-- Main -->
+<div id="main">
+<div class="cl">&nbsp;</div>
+
+<!-- Content -->
+<div id="content">
+
+
+<!-- Box -->
+<div class="box">
+<!-- Box Head -->
+<div class="box-head">
+<h2>Detalhes de contatos do site</h2>
+</div>
+<!-- End Box Head -->
+
+<form action="" method="post">
+
+<!-- Form -->
+<div class="form">
+  <p>
+<label><%= @post.data_evento.strftime("%d %B %Y") %></label>
+  </p>
+<p>
+
+<label><%= @post.titulo %></label>
+
+</p>  
+
+<p>
+<label>
+<%= @post.descricao %></label>
+</p>
+ <p>
+<label><%= @post.local %></label>
+  </p>
+<p>
+ 
+<label>
+<%= @post.cidade %></label>
+</p>
+<p>
+  <label>
+  <%= @post.email %></label>
+</p>
+<p>
+  <label>
+  <%= @post.autor %></label>
+</p>
+
+<p>
+<label>
+<%= textilize @post.body %></label>
+</p>
+
+
+</div>
+<!-- End Form -->
+
+<!-- Form Buttons -->
+<div class="buttons">
+
+<%= link_to 'Back', admin_posts_path ,:class => "button" %>  
+
+</div>
+<!-- End Form Buttons -->
+</form>
+</div>
+<!-- End Box -->
+
+</div>
+<!-- End Content -->
+
+<!-- Sidebar -->
+<div id="sidebar">
+
+
+
+</div>
+<!-- End Sidebar -->
+
+<div class="cl">&nbsp;</div>      
+</div>
+<!-- Main -->
+
+
+
+
+
+

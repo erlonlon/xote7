@@ -1,0 +1,80 @@
+<!-- Main -->
+<div id="main">
+<div class="cl">&nbsp;</div>
+
+<!-- Content -->
+<div id="content">
+
+
+<!-- Box -->
+<div class="box">
+<!-- Box Head -->
+<div class="box-head">
+<h2>Detalhes de contatos do site</h2>
+</div>
+<!-- End Box Head -->
+
+<form action="" method="post">
+
+<!-- Form -->
+<div class="form">
+  <p>
+<label><%= @contact.created_at.strftime("%d %B %Y") %></label>
+  </p>
+<p>
+
+<label><%= @contact.nome %></label>
+
+</p>  
+
+<p>
+<label>
+<%= @contact.email %></label>
+</p>
+
+<p>
+<label>
+<%= @contact.cidade %></label>
+</p>
+
+<p>
+<label>
+<%= @contact.assunto %></label>
+</p>
+
+<p>
+<label>
+<%= @contact.conteudo %></label>
+</p>
+
+
+</div>
+<!-- End Form -->
+
+<!-- Form Buttons -->
+<div class="buttons">
+
+<%= link_to 'Back', admin_contacts_path ,:class => "button" %>  
+
+</div>
+<!-- End Form Buttons -->
+</form>
+</div>
+<!-- End Box -->
+
+</div>
+<!-- End Content -->
+
+<!-- Sidebar -->
+<div id="sidebar">
+
+
+
+</div>
+<!-- End Sidebar -->
+
+<div class="cl">&nbsp;</div>      
+</div>
+<!-- Main -->
+
+

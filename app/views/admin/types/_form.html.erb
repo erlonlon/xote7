@@ -1,0 +1,55 @@
+<!-- Main -->
+<div id="main">
+<div class="cl">&nbsp;</div>
+
+<!-- Content -->
+<div id="content">    
+
+
+<!-- Box -->
+<div class="box">
+<!-- Box Head -->
+<div class="box-head">
+<h2>Cadastro de categoria fotos</h2>
+</div>
+<!-- End Box Head -->
+
+<%= form_for [:admin, @type ] do |f| %>
+<%= error_messages_for @type %>
+<!-- Form -->
+<div class="form">
+<p>
+
+<%= f.text_field :nome , :placeholder => "Digite categoria foto", :class => "field size1" %>
+
+</p>  
+<p>
+<div class="buttons">
+<%= f.submit %> <%= link_to 'Cancelar', admin_types_path ,:class => "button"%>
+</div>
+</p>
+
+</div>
+<!-- End Form -->
+
+
+<% end %>
+</div>
+<!-- End Box -->
+
+</div>
+<!-- End Content -->
+
+<!-- Sidebar -->
+<div id="sidebar">
+
+<%= render :partial => 'menulateral' %>
+
+</div>
+<!-- End Sidebar -->
+
+<div class="cl">&nbsp;</div>      
+</div>
+<!-- Main -->
+
+

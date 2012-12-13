@@ -1,0 +1,79 @@
+
+<!-- Main -->
+<div id="main">
+<div class="cl">&nbsp;</div>
+
+<!-- Content -->
+<div id="content">
+
+
+<!-- Box -->
+<div class="box">
+<!-- Box Head -->
+<div class="box-head">
+<h2>Detalhes de fotos e arquivos</h2>
+</div>
+<!-- End Box Head -->
+
+<form action="" method="post">
+
+<!-- Form -->
+<div class="form">
+  <p>
+<label><%= @gallery.created_at.strftime("%d %B %Y") %></label>
+  </p>
+<p>
+
+<label><%= @gallery.titulo %></label>
+
+</p>  
+<p>
+ <%= link_to image_tag(@gallery.avatar.url(:medium)) %><br>
+ <%= number_to_human_size @gallery.avatar_file_size %>
+ <%= @gallery.avatar_content_type %>
+ 
+</p>
+
+
+ <p>
+<label><%= @gallery.album %></label>
+  </p>
+<p>
+<label>
+<%= @gallery.body %></label>
+</p>
+
+</div>
+<!-- End Form -->
+
+<!-- Form Buttons -->
+<div class="buttons">
+
+<%= link_to 'Back', admin_galleries_path ,:class => "button" %>  
+
+</div>
+<!-- End Form Buttons -->
+</form>
+</div>
+<!-- End Box -->
+
+</div>
+<!-- End Content -->
+
+<!-- Sidebar -->
+<div id="sidebar">
+
+
+
+</div>
+<!-- End Sidebar -->
+
+<div class="cl">&nbsp;</div>      
+</div>
+<!-- Main -->
+
+
+
+
+
+

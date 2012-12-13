@@ -1,0 +1,80 @@
+<!-- Main -->
+<div id="main">
+<div class="cl">&nbsp;</div>
+
+<!-- Content -->
+<div id="content">
+
+<!-- Box -->
+<div class="box">
+<!-- Box Head -->
+<div class="box-head">
+<h2 class="left">Cadastro de fotos e arquivos</h2>
+
+</div>
+<!-- End Box Head --> 
+
+<!-- Table -->
+<div class="table">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<th width="35%">Titulo</th>
+<th width="35%">Imagem</th>
+<th width="30%" class="ac">Opções de alterar registro</th>
+</tr>
+<% if @galleries.present? %>
+<% @galleries.each do |gallery| %>
+<tr>
+<td><h3><%= gallery.titulo %></h3></td>  
+<td><h3><%= image_tag(gallery.avatar.url(:thumb),:size => "80x50") %></h3></td>             
+
+<td>
+<%= link_to  admin_gallery_path(gallery), confirm: 'Deletar arquivo, Tem certeza ?', method: :delete , :title => "Excluir arquivo" do %>
+Excluir
+<% end %>&nbsp;
+<%= link_to 'Editar', edit_admin_gallery_path(gallery) %>&nbsp;
+<%= link_to admin_gallery_path(gallery) do %>
+Show
+<% end %>
+</td>
+</tr>
+
+<% end %>
+<% end %>
+
+
+</table>
+
+
+<!-- Pagging -->
+<div class="pagging">
+    <div class="left">Showing 1-12 of 44</div>
+    <div class="right">
+       
+
+       <%= will_paginate @galeries %>
+
+    </div>
+</div>
+<!-- End Pagging -->
+
+
+</div>
+<!-- Table -->
+</div>
+<!-- End Box -->
+</div>
+<!-- End Content -->
+
+<!-- Sidebar -->
+<div id="sidebar">
+<%= render :partial => 'menulateral' %>
+
+</div>
+<!-- End Sidebar -->
+
+<div class="cl">&nbsp;</div>      
+</div>
+<!-- Main -->
+
+

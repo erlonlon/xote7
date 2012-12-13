@@ -26,7 +26,7 @@ body {
 h1, h2, h3 {
 	margin: 0em;
 	padding: 0em;
-	color: #FFFFFF;
+	color: #1B94BD;
 }
 
 h2 {
@@ -34,6 +34,13 @@ h2 {
 	letter-spacing: -.1em;
 	text-transform: uppercase;
 	font-size: 2em;
+}
+h3 {
+	padding: 0em 0em 1em 0em;
+	letter-spacing: -.1em;
+	text-transform: uppercase;
+	font-size: 1em;
+	color:#87CEFF ;
 }
 
 p {
@@ -207,7 +214,7 @@ ul.style3 {
 ul.style3 li {
 	padding: 1em 0em;
 	border-bottom: solid 1px rgba(0,0,0,0.15);
-	border-top: solid 1px rgba(255,255,255,0.15);
+	
 }
 
 ul.style3 li:first-child {
@@ -222,7 +229,7 @@ ul.style3 a {
 	padding: 0em 0em 0em 1em;
 	background: url(img04.png) no-repeat left 4px;
 	text-decoration: none;
-	text-shadow: 1px 1px 0px #1B94BD;
+	
 	color: #B5B5B5;
 }
 

@@ -1,0 +1,70 @@
+
+<!-- Main -->
+<div id="main">
+<div class="cl">&nbsp;</div>
+
+<!-- Content -->
+<div id="content">    
+
+
+<!-- Box -->
+<div class="box">
+<!-- Box Head -->
+<div class="box-head">
+<h2>Login  no sistema</h2>
+</div>
+<!-- End Box Head --><!-- Form -->
+<div class="form">
+
+<h2>Forgot your password?</h2>
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <p>
+<div class="buttons">
+<%= f.submit "Send me reset password instructions" %>
+
+<%= link_to new_user_session_path  do %>
+     
+  Cancelar   
+                 
+<% end %>
+  
+</div>
+</p>
+<% end %>
+
+   
+
+
+</div>
+<!-- End Form -->
+
+</div>
+<!-- End Box -->
+
+</div>
+<!-- End Content -->
+
+<!-- Sidebar -->
+<div id="sidebar">
+
+
+
+</div>
+<!-- End Sidebar -->
+
+<div class="cl">&nbsp;</div>      
+</div>
+<!-- Main -->
+
+
+
+
+
+
+      

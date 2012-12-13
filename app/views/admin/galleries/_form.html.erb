@@ -1,0 +1,79 @@
+<!-- Main -->
+<div id="main">
+<div class="cl">&nbsp;</div>
+
+<!-- Content -->
+<div id="content">    
+
+
+<!-- Box -->
+<div class="box">
+<!-- Box Head -->
+<div class="box-head">
+<h2>Cadastro de categoria fotos</h2>
+</div>
+<!-- End Box Head -->
+
+<%= form_for [:admin, @gallery] do |f| %>
+<%= error_messages_for @gallery %>
+<!-- Form -->
+<div class="form">
+	<p>
+    <label>Selecione a categoria</label>
+   <%= f.collection_select(:type_id, @types, :id ,:nome, :prompt => true ) %>
+
+	</p>
+<p>
+<label>Título</label>
+<%= f.text_field :titulo , :placeholder => "Digite titulo da foto", :class => "field size1" %>
+
+</p>  
+
+ <p>
+  <label>Album</label>
+    <%= f.text_field :album, :placeholder => "Digite titulo do album ", :class => "field size1" %>
+  </p>
+  
+  <p>
+    <label>Autor</label>
+ <%= f.text_field :autor, :placeholder => "Digite nome autor", :class => "field size1" %>
+  </p>
+  <p>
+  <label>Selecione o arquivo para upload</label> 
+    <%= f.file_field :avatar %></p>
+  <p>
+    <label>Faça uma descrição do arquivo</label>
+    
+    <%= f.text_area :body, :placeholder => "Descrição do arquivo ou imagem", :rows => 5, :cols => 80 %>
+  </p>
+<p>
+<div class="buttons">
+<%= f.submit %> <%= link_to 'Cancelar', admin_galleries_path ,:class => "button"%>
+</div>
+</p>
+<% end %>
+</div>
+<!-- End Form -->
+
+
+
+</div>
+<!-- End Box -->
+
+</div>
+<!-- End Content -->
+
+<!-- Sidebar -->
+<div id="sidebar">
+
+<%= render :partial => 'menulateral' %>
+
+</div>
+<!-- End Sidebar -->
+
+<div class="cl">&nbsp;</div>      
+</div>
+<!-- Main -->
+
+
+

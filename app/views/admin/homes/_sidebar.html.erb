@@ -1,0 +1,34 @@
+<!-- Box -->
+				<div class="box">
+					
+					<!-- Box Head -->
+					<div class="box-head">
+						<h2>Menu de opções</h2>
+					</div>
+					<!-- End Box Head-->
+					
+					<div class="box-content">
+						 <%= link_to admin_root_path, :class =>"add-button" do %>
+			    	<span>Home</span>
+                <% end %>	
+                <div class="cl">&nbsp;</div>				
+						
+			    <%= link_to admin_posts_path, :class => "add-button" do %>
+			    	<span>Cadastro Geral</span><% end %>
+			    	 <div class="cl">&nbsp;</div>	
+			    	<%= link_to admin_categories_path, :class =>"add-button" do %>
+			    	<span>Cadastro categoria</span><% end %>
+			    	 <div class="cl">&nbsp;</div>	
+			    	<%= link_to admin_types_path, :class => "add-button" do %>
+			    	<span>Cadastro categoria fotos</span><% end %>
+ <div class="cl">&nbsp;</div>	
+			    <%= link_to admin_contacts_path, :class => "add-button" do %>
+			    	<span>Listagem de contatos</span><% end %>
+			    	 <div class="cl">&nbsp;</div>	
+
+			    <%= link_to admin_galleries_path, :class => "add-button" do %>
+			    	<span>Cadastro Fotos e Arquivos</span><% end %>
+						 <div class="cl">&nbsp;</div>	
+					</div>
+				</div>
+				<!-- End Box -->

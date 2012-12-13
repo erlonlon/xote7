@@ -1,14 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Xote7</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title>Administração Bandaxote7</title>
+  <%= stylesheet_link_tag    "admin/admin", :media => "all" %>
   <%= javascript_include_tag "application" %>
+ 
   <%= csrf_meta_tags %>
+
+
 </head>
+
 <body>
+<!-- Header -->
+<% if user_signed_in? %>
+<div id="header">
+	<div class="shell">
+		<!-- Logo + Top Nav -->
+		<div id="top">
+			<h1><%= link_to admin_root_path do %>
+		          PAINEL ADMINISTRATIVO BANDAXOTE7
+			  <% end %> 
+		</h1>
+			<div id="top-navigation">
+				Seja Bem Vindo <a href="#"><strong><%= current_user.email %></strong></a>
+				<span>|</span>			
+			      IP <strong><%= current_user.last_sign_in_ip %></strong>
+			      <span>|</span>
+			      Último acesso <strong><%= current_user.last_sign_in_at.strftime("%d %b %y") %></strong>
+			      <span>|</span>
+				  <%= link_to  destroy_user_session_path, :method => :delete  do %>
+                    <span>Sair</span>
+                    <% end %> 
+			</div>
+		</div>
+		<!-- End Logo + Top Nav -->
+		
+		<!-- Main Nav -->
+			
+		<div id="navigation">
+			<ul>
+			    <li><%= link_to admin_root_path, :class =>"active" do %>
+			    	<span>Home</span>
+                <% end %>
+			    </li>
+			    <li><%= link_to admin_posts_path do %>
+			    	<span>Cadastro Geral</span><% end %></li>
+			    	<li><%= link_to admin_categories_path do %>
+			    	<span>Cad. categoria</span><% end %></li>
+			    	<li><%= link_to admin_types_path do %>
+			    	<span>Cad. categoria fotos</span><% end %></li>
 
+			    <li><%= link_to admin_contacts_path do %>
+			    	<span>Listagem de contatos</span><% end %></li>
+
+			    <li><%= link_to admin_galleries_path do %>
+			    	<span>Cad. Fotos e Arquivos</span><% end %></li>
+			    	<li><%= link_to admin_users_path do %>
+			    	<span>Cad. usuário</span><% end %></li>
+
+			    	<li>   
+                    <%= link_to  destroy_user_session_path, :method => :delete  do %>
+                    <span>Sair</span>
+                    <% end %>  </li>
+			 
+			</ul>
+		</div>
+		<!-- End Main Nav -->
+		 <% end %>
+	</div>
+</div>
+<!-- End Header -->
+
+<!-- Container -->
+<div id="container">
+	<div class="shell">
+	  <%= flash_messages %>
+	  
 <%= yield %>
+</div>
+</div>
+<!-- End Container -->
 
+<!-- Footer -->
+<div id="footer">
+	<div class="shell">
+		<span class="left">&copy; 2012 - CompanyName</span>
+		<span class="right">
+			Design by <a href="http://www.eboxbrasil.com.br" target="_blank" title="Criação de Sites Blogs">www.eboxbrasil.com.br - Erlon Carlos</a>
+		</span>
+	</div>
+</div>
+<!-- End Footer -->
+	
 </body>
+</html>
 </html>

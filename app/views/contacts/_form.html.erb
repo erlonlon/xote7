@@ -1,0 +1,147 @@
+<!--slide show-->
+  <div class="5grid-layout" id="welcome">
+    <%= render :partial => 'pages/slide' %> 
+  </div>
+  <!--fecha slide show-->
+  <div class="5grid-layout" id="page-wrapper">
+    <div class="row">
+      <div class="3u">
+        <section id="pbox1">
+          <h2>Latest News</h2>
+          <ul class="style4">
+            <li class="first">
+              <% if @posts.present? %>
+            <% @posts.limit(6).each do |p| %>
+            
+            <li class="first">
+              <p class="date"><%= p.data_evento.strftime("%d %B %y")%></p>
+              <p><%= link_to  p.titulo %></p>
+            </li>
+
+            <% end %>
+            <% end %>
+            </li>
+           
+          </ul>
+        </section>
+      </div>
+      <div class="6u">
+        <section id="pbox2">
+          <h2>Envie seu contato pelo site</h2>
+           <%= flash_messages %>
+
+<%= form_for(@contact) do |f| %>
+ <%= error_messages_for @contact %>
+
+  <p>
+   <label>Nome</label>
+   <br>
+    <%= f.text_field :nome, :placeholder => "Nome do contato" %>
+
+  </p>
+  
+  <p>
+    <label>E-mail</label>
+    <br>
+        <%= f.text_field :email, :placeholder => "Digite e-mail do contato" %>
+  </p>
+  
+  <p>
+    <label>Cidade</label>
+    <br>
+        <%= f.text_field :cidade, :placeholder => "Digite a cidade" %>
+  </p>
+
+  <p>
+    <label>Assunto</label>
+    <br>
+        <%= f.text_field :assunto, :placeholder => "Digite o assunto",:size => 58 %>
+  </p>
+  <p>
+    <label>Conteúdo</label>
+       <%= f.text_area :conteudo, :cols => 80, :rows => 10, :placeholder => "Digite o conteúdo " %>
+  </p>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+        
+        </section>
+      </div>
+      <div class="3u">
+        <section id="pbox3">
+          <h2>Pellentesque</h2>
+          <ul class="style5">
+            <li class="first"><a href="#">Maecenas luctus lectus  sapien</a></li>
+            <li><a href="#">Donec dictum metus in sapien</a></li>
+            <li><a href="#">Integer gravida nibh quis urna</a></li>
+            <li><a href="#">Etiam posuere augue sit amet </a></li>
+            <li><a href="#">Mauris vulputate dolor sit amet </a></li>
+            <li><a href="#">Praesent scelerisque scelerisque </a></li>
+            <li><a href="#">Integer gravida nibh quis urna</a></li>
+            <li><a href="#">Etiam posuere augue  amet nisl</a></li>
+            <li><a href="#">Mauris vulputate dolor sit  nibh</a></li>
+          </ul>
+          <p><a href="#" class="button-style1">Read Full Article</a></p>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="5grid-layout" id="footer">
+    <div class="row">
+      <div class="8u">
+        <section id="fbox1">
+          <h2>Maecenas luctus lectus</h2>
+          <p>Pellentesque viverra vulputate enim. Aliquam erat volutpat. Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. Donec placerat odio vel elit. Nullam ante orci, pellentesque eget, tempus quis, ultrices in, est. Curabitur sit amet nulla. Nam in massa. Sed vel tellus.</p>
+          <ul class="style1">
+            <li>
+              <p><a href="#"><%= image_tag "pics01.jpg" %></a></p>
+              <p>Pellentesque viverra aliquam.</p>
+              <p><a href="#" class="button-style1">Read More</a></p>
+            </li>
+            <li>
+              <p><a href="#"><img src="images/pics02.jpg" alt=""></a></p>
+              <p>Pellentesque viverra aliquam.</p>
+              <p><a href="#" class="button-style1">Read More</a></p>
+            </li>
+            <li>
+              <p><a href="#"><img src="images/pics03.jpg" alt=""></a></p>
+              <p>Pellentesque viverra aliquam.</p>
+              <p><a href="#" class="button-style1">Read More</a></p>
+            </li>
+            <li>
+              <p><a href="#"><img src="images/pics04.jpg" alt=""></a></p>
+              <p>Pellentesque viverra aliquam.</p>
+              <p><a href="#" class="button-style1">Read More</a></p>
+            </li>
+            <li>
+              <p><a href="#"><img src="images/pics05.jpg" alt=""></a></p>
+              <p>Pellentesque viverra aliquam.</p>
+              <p><a href="#" class="button-style1">Read More</a></p>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="4u">
+        <section id="fbox2">
+          <h2>Nulla  eleifend</h2>
+          <ul class="style2">
+            <li>
+              <p><span class="date">20012.10.25</span><span class="heading-title">Etiam posuere augue</span></p>
+              <p><a href="#">Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. </a></p>
+            </li>
+            <li>
+              <p><span class="date">20012.10.25</span><span class="heading-title">Etiam posuere augue</span></p>
+              <p><a href="#">Quisque dictum. Integer nisl risus, sagittis elementum congue, nibh. Suspendisse dictum porta lectus. </a></p>
+            </li>
+            <li>
+              <p><span class="date">20012.10.25</span><span class="heading-title">Etiam posuere augue</span></p>
+              <p><a href="#">Quisque dictum. Integer nisl risus, sagittis elementum congue, nibh. Suspendisse dictum porta lectus. </a></p>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>

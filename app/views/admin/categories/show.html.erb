@@ -1,0 +1,64 @@
+
+		<!-- Main -->
+		<div id="main">
+			<div class="cl">&nbsp;</div>
+			
+			<!-- Content -->
+			<div id="content">
+				
+				<!-- Box -->
+				<div class="box">
+					<!-- Box Head -->
+					<div class="box-head">
+						<h2 class="left">Detalhes da Categoria</h2>
+						
+					</div>
+					<!-- End Box Head -->	
+
+					<!-- Table -->
+					<div class="table">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								
+								<th>Nome ca categoria</th>
+								
+								<th width="110" class="ac">Content Control</th>
+							</tr>
+							<tr>
+								
+								<td><h3><%= @category.nome %></h3></td>
+								
+							
+								<td>
+                                 <%= link_to 'Voltar', admin_categories_path %>	
+									</td>
+							</tr>						
+							
+						</table>
+						
+						
+						
+						
+					</div>
+					<!-- Table -->
+					
+				</div>
+				<!-- End Box -->
+				
+				
+
+			</div>
+			<!-- End Content -->
+			
+			<!-- Sidebar -->
+			<div id="sidebar">
+				
+				<%= render :partial => 'menulateral' %>
+				
+			</div>
+			<!-- End Sidebar -->
+			
+			<div class="cl">&nbsp;</div>			
+		</div>
+		<!-- Main -->
+	

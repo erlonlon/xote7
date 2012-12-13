@@ -1,0 +1,65 @@
+<!-- Main -->
+<div id="main">
+<div class="cl">&nbsp;</div>
+
+<!-- Content -->
+<div id="content">    
+
+
+<!-- Box -->
+<div class="box">
+<!-- Box Head -->
+<div class="box-head">
+<h2>Login  no sistema</h2>
+</div>
+<!-- End Box Head --><!-- Form -->
+<div class="form">
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <p>
+  	<label>E-mail</label>
+  <%= f.email_field :email, :placeholder => "Digite  o e-mail" %></p>
+
+  <p><label>Senha</label>
+  <%= f.password_field :password, :placeholder => "Digite a senha" %></p>
+
+  <% if devise_mapping.rememberable? -%>
+    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
+  <% end -%>
+
+   <p>
+<div class="buttons">
+<%= f.submit "Sign in" %>
+   or <%= link_to "Recuperar senha?", new_password_path(resource_name) %>
+  
+</div>
+</p>
+<% end %>
+
+</div>
+<!-- End Form -->
+
+</div>
+<!-- End Box -->
+
+</div>
+<!-- End Content -->
+
+<!-- Sidebar -->
+<div id="sidebar">
+
+
+
+</div>
+<!-- End Sidebar -->
+
+<div class="cl">&nbsp;</div>      
+</div>
+<!-- Main -->
+
+
+
+
+
+
+      

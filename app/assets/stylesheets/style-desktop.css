@@ -91,6 +91,72 @@
 
 /* Main Wrapper */
 
+
+/* calendar */
+.calendar {
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+ 
+.calendar td,
+.calendar th {
+  color: #000;
+  font-family: "Lucida Grande",arial,helvetica,sans-serif;
+  font-size: 12px;
+  padding: 6px;
+  text-transform: uppercase;
+
+}
+ 
+.calendar th {
+  border: 1px solid #ccc;
+  background: #ccc;
+  color: #000;
+  text-align: left;
+}
+ 
+.calendar td  {
+  background: #696969;
+  border: 1px solid #ccc;
+  height: 50px;
+  font-size: 12px;
+  color: #E8E8E8;
+ 
+
+}
+.calendar a{
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+}
+.calendar a:hover{
+	text-decoration: nome;
+	color: #1B94BD;
+}
+ 
+.calendar span {
+  display: block;
+}
+ 
+.calendar td.events {
+  background: #fff;
+}
+ 
+.calendar td.today {
+  background: #FF6347;
+  color: #000;
+}
+ 
+.calendar caption {
+  display: none;
+
+
+}
+/* calendar */
+
+
 #wrapper {
 }
 

@@ -1,0 +1,95 @@
+<!-- Main -->
+<div id="main">
+<div class="cl">&nbsp;</div>
+
+<!-- Content -->
+<div id="content">    
+
+
+<!-- Box -->
+<div class="box">
+<!-- Box Head -->
+<div class="box-head">
+<h2>Cadastro geral de notícias e eventos</h2>
+</div>
+<!-- End Box Head -->
+<!-- Form -->
+<div class="form">
+  <%= form_for [:admin,@post] do |f| %>
+   <%= error_messages_for @post %>
+  <p>
+    <label>Selecione a categoria</label>
+     <%= f.collection_select(:category_id, @categories, :id ,:nome, :prompt => true ) %>
+  </p>
+  <p>
+     <label>Autor</label>
+    <%= f.text_field :autor, :placeholder => "Digite o autor ", :class => "field size1" %>
+  </p>
+
+  <p>
+     <label>Título</label>
+     <%= f.text_field :titulo, :placeholder => "Digite o titulo ou evento", :class => "field size1" %>
+  </p>
+ 
+  <p>
+    <label>Descrição</label>
+    <%= f.text_field :descricao, :placeholder => "Digite o sub-titulo ou evento", :class => "field size1" %>
+  </p>
+ 
+  <p>
+     <label>Local do evento</label>
+    <%= f.text_field :local, :placeholder => "Digite o local do evento (Exemplo: Kangaia)", :class => "field size1" %>
+  </p>
+ 
+   <p>
+     <label>Cidade</label>
+    <%= f.text_field :cidade, :placeholder => "Digite a cidade (Exemplo: Aracati )", :class => "field size1" %>
+  </p>
+  <p>
+     <label>E-mail</label>
+    <%= f.text_field :email, :placeholder => "Digite o e-mail (exemplo@gmail.com) ", :class => "field size1" %>
+  </p>
+  <p>
+     <label>Site url</label>
+    <%= f.text_field :url, :placeholder => "Digite o endereço do site (http://www.exemplo.com.br) ", :class => "field size1" %>
+  </p>
+  <p>
+    <label>Data do evento ou notícia</label>
+    <%= f.date_select :data_evento %>
+  </p>
+  
+  <p>
+
+     <label>Conteúdo</label>
+    <%= f.text_area :body , :placeholder => "Digite o contéudo da notícia ou evento ", :cols => 90 , :rows => 10%>
+  </p>
+  <div class="buttons">
+<%= f.submit %> <%= link_to 'Cancelar', admin_posts_path ,:class => "button"%>
+</div>
+
+<% end %>
+
+</div>
+<!-- End Form -->
+
+</div>
+<!-- End Box -->
+
+</div>
+<!-- End Content -->
+
+<!-- Sidebar -->
+<div id="sidebar">
+
+<%= render :partial => 'menulateral' %>
+
+</div>
+<!-- End Sidebar -->
+
+<div class="cl">&nbsp;</div>      
+</div>
+<!-- Main -->
+
+
+
+

@@ -1,0 +1,78 @@
+<!-- Main -->
+<div id="main">
+<div class="cl">&nbsp;</div>
+
+<!-- Content -->
+<div id="content">
+
+<!-- Box -->
+<div class="box">
+<!-- Box Head -->
+<div class="box-head">
+<h2 class="left">Cadastro notícias e eventos</h2>
+
+</div>
+<!-- End Box Head --> 
+
+<!-- Table -->
+<div class="table">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <th width="20">Data Evento</th>    
+    <th width="40%">Titulo</th>
+    <th width="20%">Cidade</th>
+    <th width="20%" class="ac">Opções de controler</th>
+    </tr>
+       <% if @posts.present? %>
+        <% @posts.each do |post| %>
+        <tr>
+        <td><h3><%= post.data_evento.strftime("%d %B %Y") %></h3></td>  
+         <td><h3><%= post.titulo %></h3></td>  
+          <td><h3><%= post.cidade %></h3></td>                
+
+        <td>
+        <%= link_to  admin_post_path(post), confirm: 'Deletar arquivo, Tem certeza ?', method: :delete , :title => "Excluir arquivo" do %>
+        Excluir
+        <% end %>&nbsp;
+        <%= link_to 'Editar', edit_admin_post_path(post) %>&nbsp;
+        <%= link_to admin_post_path(post) do %>
+        Show
+        <% end %>
+        </td>
+        </tr>
+
+        <% end %>
+        <% end %>
+
+    </table>
+
+    <!-- Pagging -->
+<div class="pagging">
+    <div class="left">Showing 1-12 of 44</div>
+    <div class="right">
+       
+
+       <%= will_paginate @galeries %>
+
+    </div>
+</div>
+<!-- End Pagging -->
+</div>
+<!-- Table -->
+</div>
+<!-- End Box -->
+</div>
+<!-- End Content -->
+
+<!-- Sidebar -->
+<div id="sidebar">
+<%= render :partial => 'menulateral' %>
+
+</div>
+<!-- End Sidebar -->
+
+<div class="cl">&nbsp;</div>      
+</div>
+<!-- Main -->
+
+

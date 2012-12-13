@@ -1,0 +1,19 @@
+<section id="pbox1">
+					<h2>Agenda de Shows</h2>
+					<ul class="style4">
+						<% if @post_show.present? %>
+						<% @post_show.posts.limit(6).each do |p| %>
+						
+						<li class="first">
+							<p class="date"><%= p.data_evento.strftime("%d %B %y")%><br>
+							<%= link_to  agenda_path(p) do %>
+						  	<%= p.titulo %>
+                           <% end %>
+						</p>
+						</li>
+
+						<% end %>
+						<% end %>
+					
+					</ul>
+				</section>

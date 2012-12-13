@@ -3,12 +3,17 @@
 				<section class="content">
 					
            
-            <div id="slider" class="nivoSlider">               
+            <div id="slider" class="nivoSlider">  
+            <% @gallery_eventos.galleries.each do |evento| %>
+
+            <%= image_tag(evento.avatar.url(:small)) %>
+                 
+              
+
+            <% end %>             
                
-                <%= image_tag "walle.jpg" %>
-                <%= image_tag "nemo.jpg" %>
-                 <%= image_tag "toystory.jpg" %>
-                   <%= image_tag "up.jpg" %>
+             
+              
             </div>
           
       

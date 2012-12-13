@@ -1,0 +1,76 @@
+<!-- Main -->
+<div id="main">
+<div class="cl">&nbsp;</div>
+
+<!-- Content -->
+<div id="content">
+
+<!-- Box -->
+<div class="box">
+<!-- Box Head -->
+<div class="box-head">
+<h2 class="left">Cadastro de categorias fotos</h2>
+
+</div>
+<!-- End Box Head --> 
+
+<!-- Table -->
+<div class="table">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+         <th width="20%">Código</th>
+    <th width="60%">Nome categoria foto</th>
+    <th width="20%" class="ac">Opções de alterar registro</th>
+    </tr>
+       <% if @types.present? %>
+        <% @types.each do |type| %>
+        <tr>
+             <td><h3><%= type.id %></h3></td>   
+        <td><h3><%= type.nome %></h3></td>             
+
+        <td>
+        <%= link_to  admin_type_path(type), confirm: 'Deletar arquivo, Tem certeza ?', method: :delete , :title => "Excluir arquivo" do %>
+        Excluir
+        <% end %>&nbsp;
+        <%= link_to 'Editar', edit_admin_type_path(type) %>&nbsp;
+        <%= link_to admin_type_path(type) do %>
+        Show
+        <% end %>
+        </td>
+        </tr>
+
+        <% end %>
+        <% end %>
+
+    </table>
+
+    <!-- Pagging -->
+<div class="pagging">
+    <div class="left">Showing 1-12 of 44</div>
+    <div class="right">
+       
+
+       <%= will_paginate @galeries %>
+
+    </div>
+</div>
+<!-- End Pagging -->
+</div>
+<!-- Table -->
+</div>
+<!-- End Box -->
+</div>
+<!-- End Content -->
+
+<!-- Sidebar -->
+<div id="sidebar">
+<%= render :partial => 'menulateral' %>
+
+</div>
+<!-- End Sidebar -->
+
+<div class="cl">&nbsp;</div>      
+</div>
+<!-- Main -->
+
+

@@ -1,0 +1,98 @@
+
+<!--slide show-->
+	<div class="5grid-layout" id="welcome">
+		<%= render :partial => 'pages/slide' %> 
+	</div>
+	<!--fecha slide show-->
+	<div class="5grid-layout" id="page-wrapper">
+		<div class="row">
+			<div class="3u">
+				<%= render :partial => 'pages/sidebar_agenda' %> 
+			</div>
+			<div class="6u">
+				<section id="pbox2">
+					<h2>Detalhes do Show</h2>
+
+					<p>
+                        <%= @post.titulo %>
+                     
+					</p>
+					
+					
+				</section>
+			</div>
+			<div class="3u">
+				<section id="pbox3">
+					<h2>Pellentesque</h2>
+					<ul class="style5">
+						<li class="first"><a href="#">Maecenas luctus lectus  sapien</a></li>
+						<li><a href="#">Donec dictum metus in sapien</a></li>
+						<li><a href="#">Integer gravida nibh quis urna</a></li>
+						<li><a href="#">Etiam posuere augue sit amet </a></li>
+						<li><a href="#">Mauris vulputate dolor sit amet </a></li>
+						<li><a href="#">Praesent scelerisque scelerisque </a></li>
+						<li><a href="#">Integer gravida nibh quis urna</a></li>
+						<li><a href="#">Etiam posuere augue  amet nisl</a></li>
+						<li><a href="#">Mauris vulputate dolor sit  nibh</a></li>
+					</ul>
+					<p><a href="#" class="button-style1">Read Full Article</a></p>
+				</section>
+			</div>
+		</div>
+	</div>
+	<div class="5grid-layout" id="footer">
+		<div class="row">
+			<div class="8u">
+				<section id="fbox1">
+					<h2>Maecenas luctus lectus</h2>
+					<p>Pellentesque viverra vulputate enim. Aliquam erat volutpat. Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. Donec placerat odio vel elit. Nullam ante orci, pellentesque eget, tempus quis, ultrices in, est. Curabitur sit amet nulla. Nam in massa. Sed vel tellus.</p>
+					<ul class="style1">
+						<li>
+							<p><a href="#"><%= image_tag "pics01.jpg" %></a></p>
+							<p>Pellentesque viverra aliquam.</p>
+							<p><a href="#" class="button-style1">Read More</a></p>
+						</li>
+						<li>
+							<p><a href="#"><img src="images/pics02.jpg" alt=""></a></p>
+							<p>Pellentesque viverra aliquam.</p>
+							<p><a href="#" class="button-style1">Read More</a></p>
+						</li>
+						<li>
+							<p><a href="#"><img src="images/pics03.jpg" alt=""></a></p>
+							<p>Pellentesque viverra aliquam.</p>
+							<p><a href="#" class="button-style1">Read More</a></p>
+						</li>
+						<li>
+							<p><a href="#"><img src="images/pics04.jpg" alt=""></a></p>
+							<p>Pellentesque viverra aliquam.</p>
+							<p><a href="#" class="button-style1">Read More</a></p>
+						</li>
+						<li>
+							<p><a href="#"><img src="images/pics05.jpg" alt=""></a></p>
+							<p>Pellentesque viverra aliquam.</p>
+							<p><a href="#" class="button-style1">Read More</a></p>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="4u">
+				<section id="fbox2">
+					<h2>Nulla  eleifend</h2>
+					<ul class="style2">
+						<li>
+							<p><span class="date">20012.10.25</span><span class="heading-title">Etiam posuere augue</span></p>
+							<p><a href="#">Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. </a></p>
+						</li>
+						<li>
+							<p><span class="date">20012.10.25</span><span class="heading-title">Etiam posuere augue</span></p>
+							<p><a href="#">Quisque dictum. Integer nisl risus, sagittis elementum congue, nibh. Suspendisse dictum porta lectus. </a></p>
+						</li>
+						<li>
+							<p><span class="date">20012.10.25</span><span class="heading-title">Etiam posuere augue</span></p>
+							<p><a href="#">Quisque dictum. Integer nisl risus, sagittis elementum congue, nibh. Suspendisse dictum porta lectus. </a></p>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</div>

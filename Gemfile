@@ -13,11 +13,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'paperclip'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'will_paginate'
 gem 'RedCloth'
 gem 'devise'
 gem 'reverse_captcha'
+gem "simple_calendar", "~> 0.1.1"
 
 gem 'jquery-rails'
 

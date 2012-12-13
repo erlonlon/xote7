@@ -1,0 +1,55 @@
+<!-- Main -->
+<div id="main">
+<div class="cl">&nbsp;</div>
+
+<!-- Content -->
+<div id="content">		
+
+
+<!-- Box -->
+<div class="box">
+<!-- Box Head -->
+<div class="box-head">
+<h2>Cadastro de categoria </h2>
+</div>
+<!-- End Box Head -->
+
+<%= form_for [:admin, @category ] do |f| %>
+<%= error_messages_for @category %>
+<!-- Form -->
+<div class="form">
+<p>
+
+<%= f.text_field :nome , :placeholder => "Digite a categoria", :class => "field size1" %>
+
+</p>	
+<p>
+<div class="buttons">
+<%= f.submit %> <%= link_to 'Back', admin_categories_path ,:class => "button"%>
+</div>
+</p>
+
+</div>
+<!-- End Form -->
+
+
+<% end %>
+</div>
+<!-- End Box -->
+
+</div>
+<!-- End Content -->
+
+<!-- Sidebar -->
+<div id="sidebar">
+
+<%= render :partial => 'menulateral' %>
+
+</div>
+<!-- End Sidebar -->
+
+<div class="cl">&nbsp;</div>			
+</div>
+<!-- Main -->
+
+

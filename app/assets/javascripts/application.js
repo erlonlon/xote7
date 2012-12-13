@@ -13,3 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+//= require_self
+
+$(function(){
+  $(".media").insertTextileImageTo("#post_body");
+});
