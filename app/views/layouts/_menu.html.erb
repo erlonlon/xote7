@@ -1,24 +1,35 @@
 <div class="5grid-layout">
-      <div class="row">
-        <div class="4u" id="logo">
-          <h1><a href="#" class="mobileUI-site-name">Banda Xote7</a></h1>
-          <p>explosão de forro</p>
-        </div>
-        <div class="8u" id="menu">
-          <nav class="mobileUI-site-nav">
-            <ul>
-              <li class="current_page_item">
-              	<%= link_to root_path do %>
-                  Home
-              	<%end %>
+<div class="row">
+<div class="4u" id="logo">
+<h1>
+<%= link_to root_path, :class =>"mobileUI-site-name" do %>
+Banda Xote7
+<%end %>
+</h1>
+<p>explosão de forro</p>
+</div>
+<div class="8u" id="menu">
+<nav class="mobileUI-site-nav">
+    <ul>
+    <li class="current_page_item">
+    <%= link_to root_path do %>
+    Homepage
+    <%end %>
 
-              </li>
-              <li><a href="threecolumn.html">Three Column</a></li>
-              <li><a href="twocolumn1.html">Two Column #1</a></li>
-              <li><a href="twocolumn2.html">Two Column #2</a></li>
-              <li><a href="onecolumn.html">One Column</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
+    </li>
+    <li>
+     <%= link_to agendas_path do %>
+    Agenda
+    <%end %>
+    </li>
+     <li>
+     <%= link_to contacts_path do %>
+    Contatos
+    <%end %>
+    </li>
+  
+    </ul>
+</nav>
+</div>
+</div>
+</div>
