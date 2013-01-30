@@ -1,37 +1,24 @@
-<header id="header" class="5grid-layout">
-<div id="row">
-<div id="12u">
-<div id="logo">
-	<h1><%= link_to root_path, :class => "mobileUI-site-name" do %>
-    BANDA XOTE7
-		<% end %>
+<div class="5grid-layout">
+      <div class="row">
+        <div class="4u" id="logo">
+          <h1><a href="#" class="mobileUI-site-name">Banda Xote7</a></h1>
+          <p>explosão de forro</p>
+        </div>
+        <div class="8u" id="menu">
+          <nav class="mobileUI-site-nav">
+            <ul>
+              <li class="current_page_item">
+              	<%= link_to root_path do %>
+                  Home
+              	<%end %>
 
-		</h1>
-	
-</div>
-</div>
-</div>
-<div class="row">
-<div class="12u">
-<div class="5grid-layout" id="menu">
-	<nav class="mobileUI-site-nav">
-		<ul>
-			<li class="current_page_item"><%= link_to root_path do %>
-				Home
-                <% end %>
-			</li>
-			<li><%= link_to agendas_path do %>
-				Agenda
-				<% end %></li>
-			<li><%= link_to contacts_path do %>
-				Contatos <% end %></li>
-			<li><a href="twocolumn2.html">Discografia</a></li>
-			<li><a href="onecolumn.html">Galeria</a></li>
-			<li><a href="onecolumn.html">Novidades</a></li>
-			<li><a href="onecolumn.html">Xote7</a></li>
-		</ul>
-	</nav>
-</div>
-</div>
-</div>
-</header>
+              </li>
+              <li><a href="threecolumn.html">Three Column</a></li>
+              <li><a href="twocolumn1.html">Two Column #1</a></li>
+              <li><a href="twocolumn2.html">Two Column #2</a></li>
+              <li><a href="onecolumn.html">One Column</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
