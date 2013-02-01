@@ -8,6 +8,20 @@
   <%= favicon_link_tag 'favicon_atual.ico' %>
   <%= csrf_meta_tags %>
 
+  <!--slide -->
+  <script>
+    $(function(){
+      $('#slides').slides({
+        preload: true,
+        preloadImage: 'images/loading.gif',
+        play: 5000,
+        pause: 2500,
+        hoverPause: true
+      });
+    });
+  </script>
+
+<!--fecha slide -->
 </head>
 
 <body class="homepage">

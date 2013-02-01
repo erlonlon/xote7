@@ -1,15 +1,4 @@
 
-/*
-	Untitled: A responsive HTML5 website template by HTML5Templates.com
-	Released for free under the Creative Commons Attribution 3.0 license (html5templates.com/license)
-	Visit http://html5templates.com for more great templates or follow us on Twitter @HTML5T
-*/
-
-/*********************************************************************************/
-/* Desktop (>= 480px)                                                            */
-/*********************************************************************************/
-
-/* Header */
 
 #header-wrapper {
 	min-height: 5.2em;
@@ -92,6 +81,9 @@
 }
 
 #menu a:hover {
+	background: url(img11.jpg) ;
+	color: #FFFFFF;
+	box-shadow: inset 0px -15px 10px 0px rgba(0,0,0,0.25);
 }
 
 
@@ -100,7 +92,7 @@
 #wrapper {
 	overflow: hidden;
 	margin-bottom: 5em;
-	padding: 6em 0em 3em 0em;
+	padding: 2em 0em 1em 0em;
 	background: #FFFFFF;
 }
 
@@ -114,12 +106,12 @@
 
 #banner {
 	overflow: hidden;
-	margin: 3em 0em;
+	margin: 1em 0em;
 }
 
 #banner .container {
 	padding: 1.87em;
-	background: #FFFFFF url(img02.png) repeat;
+	
 }
 
 #banner a img {
@@ -244,8 +236,8 @@
 }
 
 #marketing .divider {
-	margin-bottom: 3em;
-	padding-bottom: 3em;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
 	border-bottom: 0.063em solid #D4D6D8;
 }
 
@@ -274,8 +266,8 @@
 }
 
 #featured-area .divider {
-	margin-bottom: 3em;
-	padding-bottom: 3em;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
 	border-bottom: 1px solid #303030;
 }
 
