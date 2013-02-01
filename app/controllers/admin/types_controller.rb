@@ -35,7 +35,7 @@ class Admin::TypesController < Admin::BaseController
   
   def update
     @type = Type.find(params[:id])
-    flash[:notice] = "Registo atualizado com sucesso" if @type.update_attributes(parmas[:type])
+    flash[:notice] = "Registo atualizado com sucesso" if @type.update_attributes(params[:type])
     respond_with @type, :location => admin_types_path
    
   end
