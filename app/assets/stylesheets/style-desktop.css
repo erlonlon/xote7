@@ -194,6 +194,10 @@
 }
 
 #sidebar2 .sbox3 {
+
+	max-width: 280px
+	margin-bottom: 3.12em;
+	min-width: 200px
 }
 
 /** Footer Column Content */

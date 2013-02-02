@@ -320,3 +320,10 @@ ul.style6 .first {
 	height: 1.87em;
 	background: url(img09.png) no-repeat right top;
 }
+
+audio{
+
+max-width: 200px;
+width: 200px;
+
+}
