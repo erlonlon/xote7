@@ -46,7 +46,7 @@ Xote7::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-   config.assets.precompile += %w(application.css global.css core.css core-desktop.css style.css style-desktop.css core-noscript.css core-1200px.css admin/admin.css admin/style.css slides.jquery.js slides.min.jquery.js html5shiv.js init.js jquery.js jquery.textile.image.js application.js )
+   config.assets.precompile += %w(application.css global.css core.css core-desktop.css style.css style-desktop.css core-noscript.css core-1200px.css admin/admin.css admin/style.css application.js slides.jquery.js slides.min.jquery.js html5shiv.js init.js jquery.js jquery.textile.image.js )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
