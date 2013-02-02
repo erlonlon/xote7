@@ -8,12 +8,7 @@
 	
 }
 
-/*
-	Slides container
-	Important:
-	Set the width of your slides container
-	Set to display none, prevents content flash
-*/
+
 
 .slides_container {
 	width:1160px;
@@ -22,13 +17,7 @@
 	display:none;
 }
 
-/*
-	Each slide
-	Important:
-	Set the width of your slides
-	If height not specified height will be set by the slide content
-	Set to display block
-*/
+
 
 .slides_container a {
 	width:1160px;

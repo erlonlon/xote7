@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+
+//= require html5shiv.js
+//= require init.js
+//= require jquery.textile.image.js 
 
 //= require_self
 

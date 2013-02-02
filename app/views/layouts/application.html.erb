@@ -2,17 +2,22 @@
 <html>
 <head>
   <title>Banda Xote7 - Forro da Gota</title>
-  
+  <meta charset="UTF-8">
   <%= stylesheet_link_tag    "application", :media => "all" %> 
   <%= javascript_include_tag "application" %> 
+   <%= javascript_include_tag "slides.min.jquery" %> 
+    <%= javascript_include_tag "slides.jquery" %> 
+
+
   <%= favicon_link_tag 'favicon_atual.ico' %>
   <%= csrf_meta_tags %>
 
   <!--slide -->
-  <script>
+   <script type="text/javascript">
     $(function(){
       $('#slides').slides({
         preload: true,
+        preloadImage: '<%= image_tag "loading.gif" %>',
         play: 5000,
         pause: 2500,
         hoverPause: true
