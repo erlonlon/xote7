@@ -5,7 +5,7 @@
       <div id="slides">
         <div class="slides_container">
 
-          <% @gallery_show.galleries.limit(10).each do |g| %>
+          <% @galleries.each do |g| %>
 
                 <%= link_to pages_path do %>
                     <%= image_tag(g.avatar.url(:small)) %>
@@ -19,8 +19,7 @@
         </div>
       
       </div>
-         <%= image_tag "nemo.jpg" %>
-           <%= image_tag "nemo.jpg" %>
+
 
       </div>
     </div>

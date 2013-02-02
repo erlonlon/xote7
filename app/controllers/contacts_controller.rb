@@ -17,6 +17,7 @@ class ContactsController < ApplicationController
    def load_resources
     # @post_noticias = Category.find(1)
      @gallery_show = Type.find(1)
+      @galleries = Gallery.all
      # @posts = Post.paginate page: params[:page], :per_page => 6
    end
   

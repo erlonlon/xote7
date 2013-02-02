@@ -10,6 +10,6 @@ before_filter :load_resources
    def load_resources
     # @post_show = Category.find(4)
      @gallery_show = Type.find(1)
-     #@galleries = Gallery.all
+     @galleries = Gallery.all
    end
 end
