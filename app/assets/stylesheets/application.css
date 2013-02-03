@@ -7,7 +7,8 @@
  *= require style
  *= require style-desktop
  *= require global
- *= require playaudio
+ *= require mediaelementplayer.min
+
  
  */
 

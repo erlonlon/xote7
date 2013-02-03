@@ -13,9 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 
-//= require html5shiv.js
-//= require init.js
-//= require jquery.textile.image.js 
+//= require html5shiv
+//= require init
+//= require jquery.textile.image
+//= require mediaelement-and-player
+//= require mediaelement-and-player.min
 
 //= require_self
 

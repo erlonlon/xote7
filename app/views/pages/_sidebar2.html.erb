@@ -6,20 +6,25 @@
 <div class="sbox1">
 <h2>Músicas </h2>
 
-<audio preload></audio>
-<div class="track-details">
-Player-r <em>by</em> Áudio
-</div>
+
 <ul class="style1">
 <li class="first">
-<a href="#" data-src="../audios/01.mp3" title="Ouça a música">01- Musica</a>             
+	<p>Música 01</p>
+      <audio id="player2" src="../audios/01.mp3" type="audio/mp3" controls="controls" width="280" >		
+       
+</audio>
+      
 </li> 
 <li>
-<a href="#" data-src="../audios/02.mp3" title="Ouça a música">02- Musica</a> </li>               
-<li>
-<a href="#" data-src="../audios/03.mp3" title="Ouça a música">03- Musica</a> </li>  
-<li>
-<a href="#" data-src="../audios/04.mp3" title="Ouça a música">04- Musica</a> </li>               
+	<p>Música 02</p>
+    <audio id="player2" src="../audios/02.mp3" type="audio/mp3" controls="controls" width="280">		
+	
+
+</audio>
+
+
+ </li>               
+           
 
 
 </ul>
@@ -38,3 +43,6 @@ Player-r <em>by</em> Áudio
 </ul>
 </div>
 </section>
+<script>
+$('audio').mediaelementplayer();
+</script>
