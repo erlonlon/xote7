@@ -101,7 +101,7 @@ ul.style1 {
 
 ul.style1 li {
 	padding: 0.94em 0em;
-	border-top: 1px solid #E6E6E6;
+	
 }
 
 ul.style1 a {
@@ -113,7 +113,8 @@ ul.style1 a {
 }
 
 ul.style1 a:hover {
-	text-decoration: underline;
+	text-decoration: nome;
+	color: #43A4D3;
 }
 
 ul.style1 .first {
@@ -129,8 +130,8 @@ ul.style2 {
 }
 
 ul.style2 li {
-	padding: 1.25em 0em 2.5em 0em;
-	border-top: 1px solid #E6E6E6;
+	padding: 0.25em 0em 1.5em 0em;
+	
 }
 
 ul.style2 a {
@@ -188,7 +189,7 @@ ul.style3 a {
 }
 
 ul.style3 a:hover {
-	text-decoration: underline;
+	text-decoration: nome;
 }
 
 ul.style3 .date {
@@ -232,7 +233,7 @@ ul.style4 a {
 }
 
 ul.style4 a:hover {
-	text-decoration: underline;
+	text-decoration: nome;
 }
 
 ul.style4 li {
@@ -284,7 +285,7 @@ ul.style6 p {
 
 ul.style6 li {
 	padding: 1.25em 0em 1.25em 0em;
-	border-top: 1px solid #303030;
+	
 	line-height: 170%;
 }
 
@@ -296,7 +297,8 @@ ul.style6 a {
 }
 
 ul.style6 a:hover {
-	text-decoration: underline;
+	text-decoration: nome;
+	color: #43A4D3;
 }
 
 ul.style6 .first {
@@ -321,9 +323,3 @@ ul.style6 .first {
 	background: url(img09.png) no-repeat right top;
 }
 
-audio{
-
-max-width: 200px;
-width: 200px;
-
-}
