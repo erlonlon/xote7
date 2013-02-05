@@ -26,7 +26,11 @@
 
 <p><a href="<%= @post.url %>" target="_blank"><%= @post.url %></a></p>
 <p><%= textilize @post.body %></p>
-<p class="button-style2"><a href="pages">Voltar</a></p>
+<p class="button-style2"><%= link_to pages_path do %>
+
+	Voltar
+ <% end %>
+</p>
 </div>
 </section>
 </div>
