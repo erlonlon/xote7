@@ -1,7 +1,13 @@
 Xote7::Application.routes.draw do 
 
+resources :musicas, :only => [:index]
 
-  resources :agendas, :only => [:index,:show]
+ resources :shows, :only => [:index]
+
+  resources :abouts, :only => [:index]
+
+  resources :agendas
+  resources :posts, :only => [:index, :show]
 
 resources :contacts
 

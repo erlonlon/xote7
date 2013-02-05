@@ -1,11 +1,8 @@
-class PagesController < ApplicationController
-
-before_filter :load_resources
+class ShowsController < ApplicationController
+	before_filter :load_resources
   def index
-
-  	@posts = Post.paginate page: params[:page], :per_page => 6
-
   end
+
 
    def load_resources
      @post_agenda = Category.find(4)

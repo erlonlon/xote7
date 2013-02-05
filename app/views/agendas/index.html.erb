@@ -1,33 +1,49 @@
- <!-- marketing -->
-  <div id="marketing">
-   
-   <%= render "pages/marketing" %>
-  </div>
-  <!-- fecha marketing -->
-  <div id="page">
-    <div class="5grid-layout">
-      <div class="row">
-        <div class="6u">
-          <div class="mobileUI-main-content" id="content">
-            <section>
-              <div class="post">
-                <h2> Agenda de Shows da Banda Xote 7</h2>
-                <p class="subtitle">Confira nossa agenda para os próximos shows</p>
-               
-                <p class="button-style2"><a href="pages">Voltar</a></p>
-              </div>
-            </section>
-          </div>
-        </div>
-        <div class="3u" id="sidebar1">
-          <%= render "pages/sidebar" %>
-        </div>
-        <div class="3u">
-          <div id="sidebar2">
-           
-             <%= render "pages/sidebar2" %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- marketing -->
+<div id="marketing">
+
+<%= render "pages/marketing" %>
+</div>
+<!-- fecha marketing -->
+<div id="page">
+<div class="5grid-layout">
+<div class="row">
+<div class="6u">
+<div class="mobileUI-main-content" id="content">
+<section>
+<div class="post">
+<h2> Agenda de Shows Banda Xote7</h2>
+<p class="subtitle">Confira nossa agenda para os próximos shows</p>
+  <% if @post_agenda.present? %>
+      <% @post_agenda.posts.each do |g| %>
+
+      <p class="subtitle">
+      <%= g.data_evento %>&nbsp;&nbsp;
+
+      <%= link_to agenda_path(g), :title => "Veja agenda completa" do %>
+      <%= g.titulo %>
+      <% end %>
+      </p>
+
+      <% end %>
+  <% end %>
+  <p>
+
+   <%= will_paginate @posts %>
+</p>
+<p class="button-style2"><a href="pages">Voltar</a></p>
+</div>
+</section>
+</div>
+</div>
+<div class="3u" id="sidebar1">
+<%= render "pages/sidebar" %>
+</div>
+<div class="3u">
+<div id="sidebar2">
+
+<%= render "pages/sidebar2" %>
+</div>
+</div>
+</div>
+</div>
+</div>

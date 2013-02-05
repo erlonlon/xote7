@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Banda Xote7 - Forro da Gota</title>
+  <meta charset="UTF-8">
+  <%= stylesheet_link_tag    "application", :media => "all" %> 
+  <%= javascript_include_tag "application" %> 
+   <%= javascript_include_tag "slides.min.jquery" %> 
+    <%= javascript_include_tag "slides.jquery" %> 
+       <%= javascript_include_tag "audio.min" %> 
+
+
+  <%= favicon_link_tag 'favicon_atual.ico' %>
+  <%= csrf_meta_tags %>
+
+  <!--slide -->
+   <script type="text/javascript">
+    $(function(){
+      $('#slides').slides({
+        preload: true,
+        preloadImage: '<%= image_tag "loading.gif" %>',
+        play: 5000,
+        pause: 2500,
+        hoverPause: true
+      });
+    });
+  </script>
+
+<!--fecha slide -->
+
+<!--facebook -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!--fecha facebook -->
+
+<!--google analitico -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-11357390-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!--google analitico -->
+
+
+
+</head>
+
+<body >
+
+<div id="header-wrapper">
+  <header id="header">
+   
+  <%= render 'layouts/menu' %>
+
+  </header>
+</div>
+<div id="wrapper">
+
+<%= yield %>
+
+
+
+
+</div>
+<div id="featured-area">
+ 
+<%= render "layouts/featured_area" %>
+
+
+</div>
+<div id="footer-wrapper">
+ <%= render "layouts/footer" %>
+
+
+</div>
+<div id="copyright">
+  <div class="5grid-layout">
+    <div class="row">
+      <div class="12u">
+        <p>&copy; Your Site Name | Images: <a href="http://www.eboxbrasil.com.br" target="_blank">Fotogrph</a> | Design: <a href="http://www.eboxbrasil.com.br" target="_blank">eboxbrasil.com.br</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+
+
+
+</html>

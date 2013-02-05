@@ -1,5 +1,7 @@
 class Contact < ActiveRecord::Base
-  attr_accessible :assunto, :cidade, :conteudo, :email, :nome
+  attr_accessible :assunto, :cidade, :conteudo, :email, :nome,:nickname
+
+   captcha :nickname
 
   validates_presence_of :assunto, :nome, :email, :conteudo
 
