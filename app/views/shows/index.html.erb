@@ -1,37 +1,39 @@
- <!-- marketing -->
-  <div id="marketing">
-   
-   <%= render "pages/marketing" %>
-  </div>
-  <!-- fecha marketing -->
-  <div id="page">
-    <div class="5grid-layout">
-      <div class="row">
-        <div class="6u">
-          <div class="mobileUI-main-content" id="content">
-            <section>
-              <div class="post">
-                <h2>Shows Banda Xote7</h2>
-                <p class="subtitle">Veja nossos shows e fique por dentro do que está pra acontecer.</p>
-                <p><a href="#"><%= image_tag "pics03.jpg" %></a><br>
-                 </p>
-              <p class="button-style2"><%= link_to pages_path do %>
 
-  Voltar
- <% end %>
-</p>
-              </div>
-            </section>
-          </div>
-        </div>
-        <div class="3u" id="sidebar1">
-         <%= render "pages/sidebar" %>
-        </div>
-        <div class="3u">
-          <div id="sidebar2">
-            <%= render "pages/sidebar2" %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+<div id="page">
+<div class="5grid-layout">
+<div class="row">
+<div class="3u" id="sidebar2">
+<%= render 'pages/sidebar' %>
+</div>
+<div class="9u mobileUI-main-content" id="content">
+<section>
+<div class="post">
+<h2>Galeria de Fotos dos Shows</h2>
+
+
+
+<div class="row divider">
+	<% @gallery.each do |g| %>
+			<div class="3u">
+
+			<section>     
+
+			<a href="<%= image_path g.avatar.url(:small) %>" rel="lightbox[roadtrip]" title="<%= g.titulo %> "> 
+		    <%= image_tag g.avatar.url(:medium), :size => "200x160" %></a>
+
+			</section>
+
+			</div>
+	<% end %>
+
+
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+
+

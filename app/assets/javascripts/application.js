@@ -18,6 +18,7 @@
 //= require jquery.textile.image
 //= require mediaelement-and-player
 //= require mediaelement-and-player.min
+//= require lightbox
 
 //= require_self
 

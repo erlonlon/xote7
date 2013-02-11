@@ -17,7 +17,7 @@ class ContactsController < ApplicationController
    def load_resources
      @post_agenda = Category.find(4)
      @gallery_show = Type.find(1)
-      @galleries = Gallery.all
+     @galleries = Gallery.find(:all, :limit => 10, :order=> 'created_at desc')
      # @posts = Post.paginate page: params[:page], :per_page => 6
    end
   

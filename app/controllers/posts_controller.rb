@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   @post_agenda = Category.find(4)
     @categories = Category.all 
    
-     @galleries = Gallery.all
+     @galleries = Gallery.find(:all, :limit => 10, :order=> 'created_at desc')
   
     
   end

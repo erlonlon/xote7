@@ -8,8 +8,6 @@
 	
 }
 
-
-
 .slides_container {
 	width:1160px;
 	overflow:hidden;
@@ -17,19 +15,14 @@
 	display:none;
 }
 
-
-
 .slides_container a {
 	width:1160px;
 	height:400px;
 	display:block;
 }
-
 .slides_container a img {
 	display:block;
 }
-
-
 
 /*
 	Pagination
@@ -60,8 +53,3 @@
 .pagination li.current a {
 	background-position:0 -12px;
 }
-
-
-
-
-
