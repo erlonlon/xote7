@@ -18,17 +18,24 @@
           <h2>Próximos Shows</h2>
           <ul class="style6">
             <li class="first">
-              <h3>Mauris vulputate dolor sit amet</h3>
-              <p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
+             
+
+              <% if @post_agenda.present? %>
+      <% @post_agenda.posts.limit(5).each do |g| %>
+
+      <p class="subtitle">
+      <%= g.data_evento %>&nbsp;&nbsp;
+
+      <%= link_to agenda_path(g), :title => "Veja agenda completa" do %>
+      <h3>
+      <%= g.titulo %></h3>
+      <% end %>
+      </p>
+
+      <% end %>
+  <% end %>
             </li>
-            <li>
-              <h3>Fusce ultrices fringilla metus</h3>
-              <p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
-            </li>
-            <li>
-              <h3>Donec dictum metus in sapien</h3>
-              <p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
-            </li>
+          
           </ul>
         </section>
       </div>
@@ -58,12 +65,12 @@
       </div>
       <div class="3u" id="box4">
         <section>
-          <h2>Músicas MP3</h2>
-          <p><strong>Aliquam erat volutpat. Pellentesque tristique ante ut risus. </strong></p>
+          <h2>Utilidade Pública</h2>
+          <p><strong>190 - Polícia Militar</strong></p>
           <p>&nbsp;</p>
-          <p>Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. </p>
+          <p><strong>197 - Polícia Civil </strong></p>
           <p>&nbsp;</p>
-          <p>Donec placerat odio vel elit. Nullam ante orci, pellentesque eget, tempus quis, ultrices in, est. Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat.</p>
+          <p><strong>193 - Corpo de Bombeiros</strong></p>
         </section>
       </div>
     </div>

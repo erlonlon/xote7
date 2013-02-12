@@ -11,16 +11,13 @@
 <div class="post">
 <h2>Galeria de Fotos dos Shows</h2>
 
-
-
 <div class="row divider">
 	<% @gallery.each do |g| %>
 			<div class="3u">
-
 			<section>     
 
 			<a href="<%= image_path g.avatar.url(:small) %>" rel="lightbox[roadtrip]" title="<%= g.titulo %> "> 
-		    <%= image_tag g.avatar.url(:medium), :size => "200x160" %></a>
+		    <%= image_tag g.avatar.url(:thumb)%></a>
 
 			</section>
 
@@ -28,10 +25,22 @@
 	<% end %>
 
 
+
 </div>
+
+
+<%= will_paginate @gallery %>
+
 </div>
+
 </section>
+
+	
 </div>
+
+
+	
+
 </div>
 </div>
 </div>

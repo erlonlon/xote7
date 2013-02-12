@@ -20,8 +20,9 @@ class PostsController < ApplicationController
   @post_agenda = Category.find(4)
     @categories = Category.all 
    
-     @galleries = Gallery.find(:all, :limit => 10, :order=> 'created_at desc')
+     @galleries = Gallery.find(:all, :limit => 7, :order=> 'created_at desc')
   
-    
+      @gallery_parceiros = Type.find(4)
+        @gallery_show = Type.find(1)
   end
 end
