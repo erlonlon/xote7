@@ -20,5 +20,6 @@ gem 'reverse_captcha'
 gem "simple_calendar", "~> 0.1.1"
 
 gem 'jquery-rails'
+gem "rake", "~> 10.0.3"
 
 
