@@ -8,6 +8,3 @@
 //= require jquery.textile.image
 //= require_self
 
-$(function(){
-  $(".media").insertTextileImageTo("#post_body");
-});
