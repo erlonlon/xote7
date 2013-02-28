@@ -8,5 +8,6 @@ class Admin::HomesController < Admin::BaseController
   private
   def load_resource
    @categories = Category.all
+   @contacts = Contact.all
   end
 end
