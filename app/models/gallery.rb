@@ -5,7 +5,7 @@ class Gallery < ActiveRecord::Base
   validates_associated :type
   belongs_to :type
 
-    has_attached_file :avatar, :styles => {:small => "1120x400#", :original => "660x400>", :medium => "300x300>", :thumb => "100x100>" }
+    has_attached_file :avatar, :styles => {:small => "1120x400#", :original => "660x400>", :medium => "300x300>", :thumb => "150x100>" }
 
    
    validates_attachment_presence :avatar

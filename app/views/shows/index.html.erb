@@ -6,37 +6,26 @@
 <div class="3u" id="sidebar2">
 <%= render 'pages/sidebar' %>
 </div>
-<div class="9u mobileUI-main-content" id="content">
-<section>
-<div class="post">
-<h2>Galeria de Fotos dos Shows</h2>
 
+<div >
 
-	<% @gallery.each do |g| %>
-			<div class="3u">
-			<section>     
+	<% @gallery.each do |g| %>		   
 
 			<a href="<%= image_path g.avatar.url(:original) %>" rel="lightbox[roadtrip]" title="<%= g.titulo %> "> 
-		    <%= image_tag g.avatar.url(:thumb), :size => "150x125" %></a>
+		    <%= image_tag g.avatar.url(:thumb) %></a>		
 
-			</section>
-
-			</div>
-	<% end %>
-
-
-
-
-
+		
+	<% end %>	
 
 </div>
 
-</section>
+<!-- Pagging -->
+<div class="pagging">       
 
-	
-
+      <%= will_paginate @gallery %>   
 </div>
-<%= will_paginate @gallery %>
+<!-- End Pagging -->
+
 	
 
 </div>

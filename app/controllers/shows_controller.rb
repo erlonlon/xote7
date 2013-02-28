@@ -3,7 +3,7 @@ class ShowsController < ApplicationController
 	 layout 'abouts'
   def index
 
-  	@gallery = Gallery.paginate page: params[:page], :per_page => 12
+  	@gallery = Gallery.paginate page: params[:page], :per_page => 36
     respond_with @gallery
   end
 
