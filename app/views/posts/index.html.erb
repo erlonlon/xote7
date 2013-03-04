@@ -1,0 +1,54 @@
+<!-- marketing -->
+<div id="marketing">
+
+<%= render "pages/marketing" %>
+</div>
+<!-- fecha marketing -->
+<div id="page">
+<div class="5grid-layout">
+<div class="row">
+<div class="6u">
+<div class="mobileUI-main-content" id="content">
+<section>
+<div class="post">
+<h2> Lista de Notícias Banda Xote7</h2>
+<p class="subtitle">Fique por dentro das novidades no Mundo Musical</p>
+  <% if @posts.present? %>
+      <% @posts.each do |g| %>
+
+      <p class="subtitle">
+      <%= g.data_evento %><br>
+
+      <%= link_to post_path(g), :title => "Veja notícia completa" do %>
+      <%= g.titulo %>
+      <% end %>
+      </p>
+
+      <% end %>
+  <% end %>
+ <div class="pagging">       
+
+   <%= will_paginate @posts %>
+</div>
+
+</div>
+</section>
+<p class="button-style2"><%= link_to pages_path do %>
+
+  Voltar
+ <% end %>
+</p>
+</div>
+</div>
+<div class="3u" id="sidebar1">
+<%= render "pages/sidebar" %>
+</div>
+<div class="3u">
+<div id="sidebar2">
+
+<%= render "pages/sidebar2" %>
+</div>
+</div>
+</div>
+</div>
+</div>

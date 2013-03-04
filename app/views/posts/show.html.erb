@@ -1,0 +1,49 @@
+<!-- marketing -->
+<div id="marketing">
+
+<%= render "pages/marketing" %>
+</div>
+<!-- fecha marketing -->
+<div id="page">
+<div class="5grid-layout">
+<div class="row">
+<div class="6u">
+<div class="mobileUI-main-content" id="content">
+<section>
+<div class="post">
+<h2> Detalhes de Notícias do Site Banda Xote7</h2>
+<p class="subtitle">Confira detalhes desta notícia de nosso site</p>
+  
+</p>
+<p class="subtitle"><%= @post.data_evento.strftime("%d %B %Y") %>&nbsp;&nbsp;&nbsp;
+   <%= @post.autor %>
+</p>
+<p><%= @post.titulo %></p>
+<p><%= @post.cidade %></p>
+<p><%= @post.local %></p>
+<p><%= @post.descricao %></p>
+<p><%= @post.email %></p>
+
+<p><a href="<%= @post.url %>" target="_blank"><%= @post.url %></a></p>
+<p><%= textilize @post.body %></p>
+<p class="button-style2"><%= link_to posts_path do %>
+
+  Voltar
+ <% end %>
+</p>
+</div>
+</section>
+</div>
+</div>
+<div class="3u" id="sidebar1">
+<%= render "pages/sidebar" %>
+</div>
+<div class="3u">
+<div id="sidebar2">
+
+<%= render "pages/sidebar2" %>
+</div>
+</div>
+</div>
+</div>
+</div>
