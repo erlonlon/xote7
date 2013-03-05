@@ -11,6 +11,7 @@
 #header {
 	overflow: hidden;
 	height: 5.2em;
+	background: #000000;
 }
 
 /* Logo */
@@ -18,11 +19,12 @@
 #logo {
 	overflow: hidden;
 	height: 5.2em;
+
 }
 
 #logo h1 a {
 	float: left;
-	padding: 0.5em 0.25em 0em 0em;
+	padding: 0.05em 0.25em 0em 0em;
 	text-decoration: none;
 	text-transform: none;
 	font-family: 'Oswald', sans-serif;
@@ -67,7 +69,7 @@
 	text-transform: none;
 	font-family: 'Abel', sans-serif;
 	font-size: 1.25em;
-	color: #2C2C2C;
+	color: #ffffff;
 }
 
 #menu .current_page_item {

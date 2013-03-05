@@ -24,6 +24,6 @@ class PostsController < ApplicationController
   
       @gallery_parceiros = Type.find(4)
         @gallery_show = Type.find(1)
-         @post_noticias = Category.find(1)
+         @post_noticias = Category.find(2)
   end
 end

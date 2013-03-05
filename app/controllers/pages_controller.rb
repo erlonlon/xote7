@@ -13,6 +13,6 @@ before_filter :load_resources
      @galleries = Gallery.find(:all, :limit => 7, :order=> 'created_at desc')
 
      @gallery_parceiros = Type.find(4)
-     @post_noticias = Category.find(1)
+     @post_noticias = Category.find(2)
    end
 end
